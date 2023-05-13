@@ -1,4 +1,19 @@
-## Usage
+# [Valorant Data Anonymizer](https://valorant-data-anonymizer.techchrism.me/)
+
+Simple tool to remove player-identifying data from Valorant API responses
+
+Currently cleans:
+ - UUIDs / PUUIDs
+ - Player gameName and tagline
+
+Does not clean:
+ - Any encoded data (such as presence base64)
+ - Potentially-identifying timestamps
+
+The main goal is to both prevent Valorant player uuids/names from appearing in search engines
+and to prevent them from being pseudo-stalked by other players trying out the API and looking for examples.
+
+## Development
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
@@ -8,9 +23,7 @@ This is the reason you see a `pnpm-lock.yaml`. That being said, any package mana
 $ npm install # or pnpm install or yarn install
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
-
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -29,6 +42,6 @@ It correctly bundles Solid in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-## Deployment
+### Deployment
 
 You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
