@@ -48,6 +48,8 @@ function recursiveAnonymize(data: JSONValue, options: AnonymizeOptions): JSONVal
         return data
     } else if (Array.isArray(data)) {
         return data.map(e => recursiveAnonymize(e, options))
+    } else if (data === null) {
+        return data
     } else {
         const result: JSONObject = {}
         for (const key in data) {
